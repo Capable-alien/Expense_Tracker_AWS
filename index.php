@@ -1,7 +1,6 @@
 <?php 
 ini_set('display_errors', 1); 
 ini_set('display_startup_errors', 1); 
-17
 error_reporting(E_ALL);
 require 'vendor/autoload.php';
 use Aws\DynamoDb\DynamoDbClient;
@@ -26,7 +25,6 @@ $date) {
  'date' => ['S' => $date],
  ],
  ]);
-18
  echo "<p class='alert success'>Expense added successfully.</p>";
  } catch (AwsException $e) {
  echo "<p class='alert error'>Unable to add expense. Error: " . $e-
@@ -55,7 +53,6 @@ function viewExpenses($client, $tableName) {
  echo "<div>Category: $category</div>";
  echo "<div>Date: $date</div>";
  echo "</div>";
-19
  }
  echo "</div>";
  echo "<h3>Total Expenses: ₹" . number_format($total, 2) . "</h3>";
@@ -84,7 +81,6 @@ $category, $date) {
  ]);
  echo "<p class='alert success'>Expense updated successfully.</p>";
  } catch (AwsException $e) {
-20
  echo "<p class='alert error'>Unable to update expense. Error: " . $e-
 >getMessage() . "</p>";
  }
@@ -112,7 +108,6 @@ $_POST['amount'], $_POST['category'], $_POST['date']);
  } elseif (isset($_POST['update'])) {
  updateExpense($client, $tableName, $_POST['id'], $_POST['description'], 
 $_POST['amount'], $_POST['category'], $_POST['date']);
-21
  } elseif (isset($_POST['delete'])) {
  deleteExpense($client, $tableName, $_POST['id']);
  }
@@ -141,7 +136,6 @@ required><br>
  <input type="text" name="category" id="category" required><br>
  <label for="date">Date:</label>
  <input type="date" name="date" id="date" required><br>
-22
  <button type="submit" name="add">Add Expense</button>
  <button type="submit" name="update">Update Expense</button>
  <button type="submit" name="delete">Delete Expense</button>
