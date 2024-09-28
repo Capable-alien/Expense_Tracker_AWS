@@ -1,0 +1,72 @@
+body {
+ font-family: Arial, sans-serif;
+ margin: 20px;
+ padding: 0;
+ background-color: #f4f4f4;
+}
+h1 {
+ text-align: center;
+ margin-bottom: 20px;
+}
+.expense-form {
+ display: flex;
+ flex-direction: column;
+ max-width: 600px;
+ margin: 0 auto;
+ padding: 20px;
+ background-color: #fff;
+ border-radius: 8px;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.expense-form label {
+ margin-bottom: 5px;
+}
+.expense-form input {
+ margin-bottom: 15px;
+ padding: 10px;
+ width: 100%;
+ border: 1px solid #ddd;
+ border-radius: 4px;
+ box-sizing: border-box;
+}
+.expense-form button {
+ margin: 5px 0;
+ padding: 10px 20px;
+ border: none;
+ color: #fff;
+ background-color: #007bff;
+ cursor: pointer;
+ border-radius: 4px;
+ font-size: 16px;
+}
+.expense-form button:hover {
+ background-color: #0056b3;
+}
+.expense-list {
+ max-width: 600px;
+ margin: 20px auto;
+}
+.expense-item {
+ border: 1px solid #ddd;
+ padding: 10px;
+ margin-bottom: 10px;
+ border-radius: 4px;
+ background-color: #fff;
+ box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.alert {
+ padding: 10px;
+ border-radius: 4px;
+ margin-bottom: 10px;
+ max-width: 600px;
+ margin: 10px auto;
+ text-align: center;
+}
+.alert.success {
+ background-color: #d4edda;
+ color: #155724;
+}
+.alert.error {
+ background-color: #f8d7da;
+ color: #721c24;
+}
